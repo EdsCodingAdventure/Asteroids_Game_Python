@@ -22,13 +22,16 @@ def main():
                 return
         screen.fill("black")
 
+        #---limiting the game to 60 FPS
+        dt = clock.tick(60) / 1000
+        #---
+        
+        player.update(dt)
         player.draw(screen)
 
         pygame.display.flip()
 
 
-        #limiting the game to 60 FPS
-        dt = clock.tick(60) / 1000
     #---
     
     print("Starting Asteroids!")
